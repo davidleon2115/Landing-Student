@@ -1,18 +1,23 @@
 <template>
     <AdditionalContentPreviewCard title="Contenido adicional">
-        <AdditionalContentPreviewCardItem v-for="(whoToFollow, index) in whoToFollowItems" :key="index">
-            <div class="flex flex-row justify-between items-center p-2">
+        <AdditionalContentPreviewCardItem v-for="(course, index) in courses" :key="index">
+            <div class="flex flex-row justify-between items-center p-2 px-5">
                 <div class="flex flex-row">
-                    <div class="text-white my-auto text-xl">
+                    <NuxtLink class="text-white my-auto text-xl" :to="course.handle" target="_blank">
                         <font-awesome-icon :icon="['fas', 'globe']" />
-                    </div>
+                    </NuxtLink>
                     <div class="ml-2">
-                        <h2 class="font-medium text-white text-base">{{whoToFollow.name}}</h2>
-                        <p class="text-xs text-white">{{whoToFollow.handle}}</p>
+                        <h2 class="font-medium text-white text-base">{{course.name}}</h2>
+                        <NuxtLink class="text-xs text-white" :to="course.handle" target="_blank">
+                            {{course.handle}}
+                        </NuxtLink>
+                        
                     </div>
                 </div>
                 <div class="flex h-full text-white">
-                    <font-awesome-icon :icon="['fas', 'arrow-up-right-from-square']" />
+                    <NuxtLink class="text-xs text-white" :to="course.handle" target="_blank">
+                        <img src="~~/assets/icons/goTo.svg" :alt="course.name">
+                    </NuxtLink>
                 </div>
             </div>
         </AdditionalContentPreviewCardItem>
@@ -20,7 +25,7 @@
 </template>
 
 <script setup>
-    const whoToFollowItems = ref([
+    const courses = ref([
         {
             name: 'Aprende GitHub',
             handle: 'https://github.com/',
