@@ -4,8 +4,12 @@
             <div class="relative">
             <textarea
             v-model="comment"
-             class="w-[30rem]
-             h-16 
+             class="
+             w-screen
+             h-24
+             text-lg
+             sm:w-[30rem]
+             sm:h-16 
              resize-none
              bg-[#2B3348]
              py-1.5
@@ -21,8 +25,10 @@
             
                 <button 
                 class="absolute
-                top-20
-                left-[19.9rem]
+                top-28
+                sm:top-20
+                right-1
+                sm:left-[19.9rem]
                 w-40
                 py-1.5
                 px-3
