@@ -6,7 +6,7 @@
                     <NuxtLink class="text-white my-auto text-xl" :to="course.handle" target="_blank">
                         <font-awesome-icon :icon="['fas', 'globe']" />
                     </NuxtLink>
-                    <div class="ml-2">
+                    <div class="ml-3">
                         <h2 class="font-medium text-white text-base">{{course.name}}</h2>
                         <NuxtLink class="text-xs text-white" :to="course.handle" target="_blank">
                             {{course.handle}}
@@ -25,6 +25,12 @@
 </template>
 
 <script setup>
+    import useFectching from '~~/composables/useFetchingGet';
+
+    // const url = "/api/"
+
+    // let courses = useFectching(url)
+
     const courses = ref([
         {
             name: 'Aprende GitHub',
