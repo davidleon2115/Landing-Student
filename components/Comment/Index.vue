@@ -5,10 +5,8 @@
               <textarea
               v-model="comment"
                 class="
-                w-screen
-                h-24
-                sm:w-[30rem]
-                sm:h-16 
+                w-[30rem]
+                h-16 
                 resize-none
                 focus:text-white
                 bg-[#2B3348]
@@ -34,8 +32,7 @@
             
                 <button 
                 class="absolute
-                top-28
-                sm:top-20
+                top-20
                 right-1
                 sm:left-[19.9rem]
                 w-40
