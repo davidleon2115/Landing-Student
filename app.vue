@@ -1,9 +1,4 @@
 <template>
-  <div class="bg-[#1C233A] min-h-screen flex flex-col justify-center items-center">
-    <div class=" min-w-[300px] w-2/3 ">
-      <AdditionalContent/>
-    </div>
-  </div>
 </template>
 
 <script setup>
