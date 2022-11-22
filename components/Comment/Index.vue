@@ -1,12 +1,12 @@
 <template>
     <div>
-        <form @submit.prevent="onSubmit()" method="post">
-            <div class="relative mb-14">
-              <textarea
+        <form @submit.prevent="onSubmit()" method="post">  
+             <textarea
               v-model="comment"
                 class="
-                w-[30rem]
+                w-full
                 h-16 
+                mb-4
                 resize-none
                 focus:text-white
                 bg-[#2B3348]
@@ -29,13 +29,9 @@
                 name="comment" 
                 id="comment" 
                 placeholder="Deja un comentario"></textarea>
-            
+           <div class="text-right">
                 <button 
-                class="absolute
-                top-20
-                right-1
-                sm:left-[19.9rem]
-                w-40
+                class="     
                 py-1.5
                 px-3
                 rounded-lg
@@ -51,7 +47,8 @@
                 text-sm
                 "
                 >Enviar comentario</button>
-              </div>
+          </div>
+        
         </form>
     </div>
 </template>
