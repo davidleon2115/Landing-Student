@@ -57,27 +57,6 @@
 </template>
 
 <script setup>
-
-let comment = ref('');
-
-const onSubmit = () => {
-const { data, pending, error, refresh } = useFetch(
-  'https://jsonplaceholder.typicode.com/posts',
-  {
-    method: 'POST',
-    body: {
-      comment: comment.value,
-    },
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-  })
-  comment.value = ""
-}
-
+  //peticiones a la API
 
 </script>
-
-<style scoped>
-
-</style>
