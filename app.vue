@@ -11,7 +11,9 @@
         </div>
         <div class="self-start">
           <comment/>
+          <ShowComment/>
         </div>
+
       </div>
     </div>
   </div>
@@ -20,6 +22,7 @@
 <script setup>
   
 
+import ShowComment from "./components/ShowCommet/ShowComment";
 </script>
 
 <style>
