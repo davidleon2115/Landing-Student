@@ -5,11 +5,14 @@
       <div class="flex justify-items-start items-center">
         <div class="min-w-[300px] w-4/6 flex flex-col">
           <img class="mr-4" src="~~/assets/img/Video.png" alt="">
-          <div class=" w-[300px] w-5/6 ">
+          <div class=" w-[300px] ">
             <AdditionalContent/>
           </div>
         </div>
+
         <div class="self-start ">
+
+        <div class="self-start w-4/12">
           <comment/>
           <div class="p-2 flex flex-col">
             <div class="py-5">
