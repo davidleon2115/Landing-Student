@@ -7,6 +7,9 @@
         <div class="min-w-[300px] w-4/6 flex flex-col">
           <img class="mr-4" src="~~/assets/img/Video.png" alt="">
           <div class=" min-w-[300px] w-5/6 ">
+            <TitleCustom/>
+          </div>
+          <div class=" min-w-[300px] w-5/6 ">
             <AdditionalContent/>
           </div>
         </div>
