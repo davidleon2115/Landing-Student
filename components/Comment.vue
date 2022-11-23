@@ -7,7 +7,6 @@
              class="
              w-screen
              h-24
-             text-lg
              sm:w-[30rem]
              sm:h-16 
              resize-none
@@ -63,6 +62,9 @@ const { data, pending, error, refresh } = useFetch(
   })
   comment.value = ""
 }
+
+
+
 
 
 </script>
