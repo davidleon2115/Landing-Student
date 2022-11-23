@@ -53,7 +53,40 @@
     </div>
 </template>
 
-<script setup>
-  //peticiones a la API
+<script>
+  export default {
+    data() {
+      return {
+        comment: [],
+        user_comentarios: {
+          comment: '',
+          user_id: 8,
+          videoId: 1
+        }
+      }
+    },
+    methods: {
+      onSubmit(e) {
+        e.preventDefault();
+        console.log(this.comment);
 
+        const commentData = new FormData();
+
+        commentData.append('comment', this.user_comentarios.comment);
+        commentData.append('user_id', this.user_comentarios.user_id);
+        commentData.append('videoId', this.user_comentarios.videoId);
+
+        this.insert(commentData)
+      },
+      insert(commentData){
+        fetch('http://localhost:3001/comentarios/createComment' ,{
+          method: 'POST',
+          body: commentData
+        }).then(res => res.json())
+            .then(data => {
+              console.log(data);
+            })
+      }
+    },
+  };
 </script>
