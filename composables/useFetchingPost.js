@@ -1,5 +1,5 @@
-export default async (url) => {
-    const fetching = await fetch(url)
+export default async (url, elemento) => {
+    const fetching = await fetch(url, elemento)
     const response = fetching.json()
     const data = response.json()
     return {
