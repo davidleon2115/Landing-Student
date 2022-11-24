@@ -11,7 +11,7 @@
                         <!-- <NuxtLink class="text-xs text-white" :to="data.handle" target="_blank">
                             {{data.contenido_extra[index].archivo}}
                         </NuxtLink> -->
-                        <p class="font-medium text-white text-base">{{data.contenido_extra[index].archivo}}</p>
+                        <p class="font-medium text-white text-base">{{data.contenido_extra[index].file}}</p>
                         
                     </div>
                 </div>
