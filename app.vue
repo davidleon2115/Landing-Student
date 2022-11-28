@@ -1,4 +1,5 @@
 <template>
+    <Comment/>
 </template>
 
 <script setup>

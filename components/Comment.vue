@@ -5,10 +5,8 @@
             <textarea
             v-model="comment"
              class="
-             w-screen
-             h-24
-             sm:w-[30rem]
-             sm:h-16 
+             h-20
+             w-full
              resize-none
              bg-[#2B3348]
              py-1.5
@@ -24,10 +22,9 @@
             
                 <button 
                 class="absolute
-                top-28
-                sm:top-20
+                top-24
                 right-1
-                sm:left-[19.9rem]
+                left-[auto]
                 w-40
                 py-1.5
                 px-3
@@ -42,27 +39,47 @@
             </div>
         </form>
     </div>
+
+<ul>
+
+</ul>
 </template>
 
 <script setup>
-
+ 
 let comment = ref('');
 
 const onSubmit = () => {
-const { data, pending, error, refresh } = useFetch(
-  'https://jsonplaceholder.typicode.com/posts',
+  const newComment = {
+    user_id:1,
+    videoId:1,
+    comment: comment.value,
+  }
+const { data, error } = useFetch(
+  'http://localhost:3001/comentarios/createComment',
   {
-    method: 'POST',
-    body: {
-      comment: comment.value,
-    },
+    method: 'post',
+    body: JSON.stringify(newComment),
     headers: {
-      'Content-type': 'application/json; charset=UTF-8',
+      'Content-type': 'application/json',
     },
   })
   comment.value = ""
 }
 
+
+
+// const urlUsers = `http://localhost:3001/username/all`
+// const {data} =  useFetch(urlUsers,{ mode: 'no-cors'})
+
+const urlVideo = `http://localhost:3001/video/id/1`
+const {data:video} =  useFetch(urlVideo)
+
+// console.log(video.value);
+
+const urlId = `http://localhost:3001/username/id/9`
+const {data:user} =  useFetch(urlId)
+// console.log(user.value);
 
 
 
