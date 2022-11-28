@@ -4,7 +4,8 @@
       <img src="~~/assets/img/nav.png" class="my-9" alt="">
       <div class="flex justify-items-start items-center">
         <div class="min-w-[300px] w-4/6 flex flex-col">
-          <img class="mr-4" src="~~/assets/img/Video.png" alt="">
+          <!-- <img class="mr-4" src="~~/assets/img/Video.png" alt=""> -->
+          <VideoPlayer/>
           <div class=" min-w-[300px] w-5/6 ">
             <AdditionalContent/>
           </div>
